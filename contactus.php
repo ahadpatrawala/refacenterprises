@@ -23,17 +23,17 @@ try {
     //Server settings
     //$mail->SMTPDebug = 2;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'eu.protondns.net';                   // Set the SMTP server to send through
+    $mail->Host       = 'yoursmtpserver';                   // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'info@refacenterprises.com';                   // SMTP username
-    $mail->Password   = 'rjnNf8dqeePl';                               // SMTP password
-	$mail->AddReplyTo('rfcentp@gmail.com');
+    $mail->Username   = 'youremail';                   // SMTP username
+    $mail->Password   = 'password';                               // SMTP password
+	$mail->AddReplyTo('secondemail');
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
     $mail->setFrom($email, $name);
-    $mail->addAddress('rfcentp@gmail.com', 'Refac Enterprises');     // Add a recipient
+    $mail->addAddress('receipentemail', 'Name');     // Add a recipient
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Message from website';
